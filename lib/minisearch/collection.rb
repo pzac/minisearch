@@ -15,6 +15,5 @@ module Minisearch
 
     private
 
-    def
   end
 end

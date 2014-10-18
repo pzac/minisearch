@@ -2,7 +2,7 @@ module Minisearch
   class Document
     attr_accessor :id, :text
 
-    def initalize(id, text)
+    def initialize(id, text)
       @id = id
       @text = text
     end
@@ -11,7 +11,7 @@ module Minisearch
     #
     def self.from_file(file, id: file)
       text = IO.read(file)
-      item = new(id, text)
+      new(id, text)
     end
   end
 end
