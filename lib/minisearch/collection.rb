@@ -13,6 +13,10 @@ module Minisearch
       @items << item
     end
 
+    def size
+      @items.size
+    end
+
     private
 
   end

@@ -7,6 +7,10 @@ module Minisearch
       @text = text
     end
 
+    def tokenize
+      return [] if text.nil? || text.strip == ''
+    end
+
     # Id default will be the filename
     #
     def self.from_file(file, id: file)

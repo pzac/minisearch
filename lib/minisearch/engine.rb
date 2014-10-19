@@ -8,8 +8,11 @@ module Minisearch
     end
 
     def add(item)
-
       @collection.add(item)
+    end
+
+    def add_from_file(filename)
+      add(Document.from_file(filename))
     end
   end
 end

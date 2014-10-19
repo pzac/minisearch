@@ -10,5 +10,12 @@ module Minisearch
         expect(item.text).to eq("hello world\n")
       end
     end
+
+    describe '#tokenize' do
+      it 'returns an empty array if the text is blank' do
+        subject = described_class.new('foo', nil)
+        expect(subject.tokenize).to be_empty
+      end
+    end
   end
 end
