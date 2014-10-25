@@ -10,11 +10,11 @@ module Minisearch
     end
 
     def add(item)
-      @items << item
+      items << item
     end
 
     def size
-      @items.size
+      items.size
     end
 
     private
