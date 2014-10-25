@@ -13,6 +13,16 @@ module Minisearch
         subject = described_class.new('foo bar')
         expect(subject.tokenize).to eq(['foo', 'bar'])
       end
+
+      it 'returns unique tokens' do
+        subject = described_class.new('foo bar foo bar')
+        expect(subject.tokenize).to eq(['foo', 'bar'])
+      end
+
+      it 'returns lowercased tokens' do
+        subject = described_class.new('FOO bAr')
+        expect(subject.tokenize).to eq(['foo', 'bar'])
+      end
     end
   end
 end

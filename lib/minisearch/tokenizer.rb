@@ -23,9 +23,14 @@ module Minisearch
       string.nil? || string.strip == ''
     end
 
+    # Raw text sanitization
+    #
     def preprocess(string)
       return nil unless string
-      string.strip
+      # Remove leading and trailing whitespace
+      string.strip \
+      # Lowercase
+        .downcase
     end
   end
 end
