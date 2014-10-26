@@ -9,8 +9,12 @@ module Minisearch
       @items = []
     end
 
+    # Adds a Document to the collection, returning the document id
+    #
     def add(item)
+      raise "Not a MinisearchDocument object" unless item.kind_of?(Document)
       items << item
+      item.id
     end
 
     def size

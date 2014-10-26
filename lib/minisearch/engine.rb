@@ -17,8 +17,8 @@ module Minisearch
       collection.size
     end
 
-    def add_from_file(filename)
-      add(Document.from_file(filename))
+    def add_from_file(filename, id: nil)
+      add(Document.from_file(filename, id: id))
     end
   end
 end
