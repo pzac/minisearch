@@ -14,6 +14,10 @@ module Minisearch
       tokenizer.tokenize
     end
 
+    def size
+      text.size
+    end
+
     # Id default will be the filename
     #
     def self.from_file(file, id: file)
@@ -31,6 +35,10 @@ module Minisearch
     #
     def generate_id
       Digest::MD5.hexdigest(text)
+    end
+
+    def inspect
+      "<#Document id:#{id}>"
     end
   end
 end

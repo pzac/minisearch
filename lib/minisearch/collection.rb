@@ -21,6 +21,10 @@ module Minisearch
       items.size
     end
 
+    def filter(&block)
+      items.select(&block)
+    end
+
     private
 
   end
